@@ -33,7 +33,6 @@ jobs:
           # Token for the github API
           github_token:  ${{ secrets.FORK_SYNC_TOKEN }}
           # Branch to track
-          head: main
+          head: actions/virtual-environments:main
           # Branch to keep updated
-          base: main
-          # Merge method to use
+          base: toddwalstad-eaton/virtual-environments:main
