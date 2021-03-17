@@ -25,6 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Add upstream
+        run: git remote add upstream https://github.com/actions/virtual-environments.git
+
       - name: Fetch Upsteam
         run: git fetch upstream
 
