@@ -26,7 +26,9 @@ $markdown = ""
 $OSName = Get-OSName
 $markdown += New-MDHeader "$OSName" -Level 1
 
+$kernelVersion = Get-KernelVersion
 $markdown += New-MDList -Style Unordered -Lines @(
+    "$kernelVersion"
     "Image Version: $env:IMAGE_VERSION"
 )
 
@@ -127,6 +129,7 @@ $toolsList = @(
     (Get-NetToolsVersion),
     (Get-NewmanVersion),
     (Get-NvmVersion),
+    (Get-OpensslVersion),
     (Get-PackerVersion),
     (Get-PassVersion),
     (Get-PhantomJSVersion),
@@ -283,6 +286,6 @@ $markdown += Get-CachedDockerImagesTableData | New-MDTable
 $markdown += New-MDNewLine
 
 $markdown += New-MDHeader "Installed apt packages" -Level 3
-$markdown += New-MDList -Style Unordered -Lines @(Get-AptPackages)
+$markdown += Get-AptPackages | New-MDTable
 
 $markdown | Out-File -FilePath "${OutputDirectory}/Ubuntu-Readme.md"
