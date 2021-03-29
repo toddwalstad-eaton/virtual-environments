@@ -88,7 +88,7 @@ sudo mv composer.phar /usr/bin/composer
 php -r "unlink('composer-setup.php');"
 
 # Add composer bin folder to path
-echo 'export PATH=$PATH:$HOME/.config/composer/vendor/bin' | tee -a /etc/profile.d/env_vars.sh
+prependEtcEnvironmentPath '$HOME/.config/composer/vendor/bin'
 
 #Create composer folder for user to preserve folder permissions
 mkdir -p /etc/skel/.composer
