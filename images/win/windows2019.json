@@ -56,7 +56,7 @@
             "os_type": "Windows",
             "image_publisher": "MicrosoftWindowsDesktop",
             "image_offer": "Windows-10",
-            "image_sku": "rs5-pro",
+            "image_sku": "20h2-ent",
             "communicator": "winrm",
             "winrm_use_ssl": "true",
             "winrm_insecure": "true",
