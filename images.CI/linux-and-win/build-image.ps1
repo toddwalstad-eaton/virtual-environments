@@ -56,7 +56,7 @@ packer build    -var "capture_name_prefix=$ResourcesNamePrefix" `
                 -var "virtual_network_resource_group_name=$VirtualNetworkRG" `
                 -var "virtual_network_subnet_name=$VirtualNetworkSubnet" `
                 -var "run_validation_diskspace=$env:RUN_VALIDATION_FLAG" `
-                -var "image_name=$env:ImageName" `
+                -var "image_name=$ImageName" `
                 $TemplatePath `
         | Where-Object {
             #Filter sensitive data from Packer logs
