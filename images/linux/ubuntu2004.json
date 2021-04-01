@@ -37,7 +37,7 @@
             "location": "{{user `location`}}",
             "vm_size": "{{user `vm_size`}}",
             "temp_resource_group_name": "{{user `temp_resource_group_name`}}",
-            "managed_image_name": "NeedsToBePassedIn",
+            "managed_image_name": "{{user `image_name`}}",
             "managed_image_resource_group_name": "{{user `resource_group`}}",
             "virtual_network_name": "{{user `virtual_network_name`}}",
             "virtual_network_resource_group_name": "{{user `virtual_network_resource_group_name`}}",

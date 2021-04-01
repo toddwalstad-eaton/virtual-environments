@@ -51,7 +51,7 @@
             "virtual_network_subnet_name": "{{user `virtual_network_subnet_name`}}",
             "private_virtual_network_with_public_ip": "{{user `private_virtual_network_with_public_ip`}}",
             "os_type": "Windows",
-            "managed_image_name": "NotSeeingThisValue",
+            "managed_image_name": "{{user `image_name`}}",
             "managed_image_resource_group_name": "{{user `resource_group`}}",
             "image_publisher": "MicrosoftWindowsServer",
             "image_offer": "WindowsServer",
