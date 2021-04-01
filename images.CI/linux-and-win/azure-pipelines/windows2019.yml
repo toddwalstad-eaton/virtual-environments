@@ -1,4 +1,4 @@
-name: MS_WIN_2019_$(Date:yyyyMMdd)$(Rev:.r)
+name: MS_WIN_2019_$(Date:yyyyMMdd)$(Rev:_r)
 
 schedules:
 - cron: "0 0 * * *"
