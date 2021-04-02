@@ -1,3 +1,5 @@
+name: MS_UBUNTU_2004_$(Date:yyyyMMdd)$(Rev:_r)
+
 schedules:
 - cron: "0 0 * * *"
   displayName: Daily
