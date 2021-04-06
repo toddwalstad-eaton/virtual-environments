@@ -116,7 +116,6 @@
     "apt": {
         "common_packages": [
             "build-essential",
-            "chromium-browser",
             "dbus",
             "dnsutils",
             "dpkg",
@@ -185,6 +184,7 @@
             "sphinxsearch",
             "sqlite3",
             "ssh",
+            "sshpass",
             "subversion",
             "sudo",
             "swig",
@@ -310,6 +310,10 @@
         {
             "name": "lerna",
             "command": "lerna"
+        },
+        {
+            "name": "yarn",
+            "command": "yarn"
         }
     ]
 }
