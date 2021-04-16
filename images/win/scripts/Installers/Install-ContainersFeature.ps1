@@ -6,6 +6,7 @@
 ################################################################################
 
 Write-Host "Install Containers feature"
-Install-WindowsFeature -Name Containers
+#Install-WindowsFeature -Name Containers
+Enable-WindowsOptionalFeature -Online -NoRestart -All -FeatureName Containers
 
 Invoke-PesterTests -TestFile "WindowsFeatures" -TestName "ContainersFeature"
