@@ -15,5 +15,8 @@ if(Test-Path $registryPath){
     Set-ItemProperty -Path $registryPath -Name $name -Value $value -Type DWORD
 }
 
+#this needs to be also set for Windows 10
+[Net.ServicePointManager]::SecurityProtocol += [Net.SecurityProtocolType]::Tls12
+
 Invoke-PesterTests -TestFile "Tools" -TestName "DotnetTLS"
 
