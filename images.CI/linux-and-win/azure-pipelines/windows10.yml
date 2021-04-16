@@ -1,0 +1,6 @@
+
+jobs:
+- template: image-generation.yml
+  parameters:
+    image_type: windows10
+    image_readme_name: Windows10-Readme.md
