@@ -6,7 +6,11 @@
 ################################################################################
 
 Write-Host "Install-Package Docker"
-Install-Package -Name docker -ProviderName DockerMsftProvider -Force
+if (Test-IsWin10){
+    Choco-Install -PackageName docker-desktop
+} else {
+    Install-Package -Name docker -ProviderName DockerMsftProvider -Force  
+}
 Start-Service docker
 
 Write-Host "Install-Package Docker-Compose"
