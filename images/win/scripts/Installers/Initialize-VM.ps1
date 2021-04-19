@@ -54,6 +54,10 @@ else {
     Write-Host "Windows Update key does not exist"
 }
 
+
+Write-Host "Disable UAC"
+Disable-UserAccessControl
+
 # Install .NET Framework 3.5 (required by Chocolatey)
 # Explicitly install all 4.7 sub features to include ASP.Net.
 if (Test-IsWin10) {
@@ -80,9 +84,6 @@ if (Test-IsWin19) {
         exit 1
     }
 }
-
-Write-Host "Disable UAC"
-Disable-UserAccessControl
 
 Write-Host "Disable IE Welcome Screen"
 Disable-InternetExplorerWelcomeScreen
