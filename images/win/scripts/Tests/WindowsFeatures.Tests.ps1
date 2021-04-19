@@ -27,7 +27,7 @@ Describe "WindowsFeatures" {
 
 Describe "ContainersFeature" {
     It "Windows containers feature is installed" {
-        (Get-WindowsFeature -Name "Containers").InstallState | Should -Be "Installed"
+        (Get-WindowsOptionalFeature -Online -FeatureName "Containers").State | Should -Be "Enabled"
     }
 }
 
