@@ -61,7 +61,7 @@ Disable-UserAccessControl
 # Install .NET Framework 3.5 (required by Chocolatey)
 # Explicitly install all 4.7 sub features to include ASP.Net.
 if (Test-IsWin10) {
-    Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName NetFx3
+    #Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName NetFx3
     Enable-WindowsOptionalFeature -Online -NoRestart -All -FeatureName WCF-TCP-PortSharing45
 } else {
     # As of  1/16/2019, WinServer 19 lists .Net 4.7 as NET-Framework-45-Features
